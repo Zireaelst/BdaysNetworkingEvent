@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
+const path = require('path');
 
 // Load environment variables
 dotenv.config();
@@ -21,14 +22,17 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
 
-// Routes
+// Serve static files from src directory
+app.use('/src', express.static(path.join(__dirname, '../src')));
+
+// API Routes
 app.use('/api/users', userRoutes);
 app.use('/api/profiles', profileRoutes);
 app.use('/api/qrcodes', qrCodeRoutes);
 
-// Root route
-app.get('/', (req, res) => {
-  res.send('BDays Networking Event API is running');
+// Serve index.html for all routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // Connect to MongoDB and start server

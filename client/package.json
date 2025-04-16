@@ -1,0 +1,18 @@
+{
+  "name": "blockchain-days-networking-event-client",
+  "version": "1.0.0",
+  "description": "Frontend for Blockchain Days Networking Event",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "html5-qrcode": "^2.3.8",
+    "imask": "^7.4.3"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+} 

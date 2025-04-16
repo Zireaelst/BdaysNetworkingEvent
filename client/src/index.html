@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthdays Networking Event</title>
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="/src/css/main.css">
-    <link rel="stylesheet" href="/src/css/utils/animations.css">
-    <link rel="stylesheet" href="/src/css/components/modal.css">
-    <link rel="stylesheet" href="/src/css/components/profile.css">
-    <link rel="stylesheet" href="/src/css/components/qr-scanner.css">
-    <link rel="stylesheet" href="/src/css/components/leaderboard.css">
+    <title>Blockchain Days Networking Event</title>
     
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#6366F1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="BD'25 Network">
-    <meta name="description" content="Birthdays Networking Event application">
+    <meta name="description" content="Blockchain Days Networking Event application">
     
     <!-- PWA Icons -->
-    <link rel="icon" type="image/png" href="/src/assets/icons/icon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/assets/icons/icon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/utils/animations.css">
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="/css/components/modal.css">
+    <link rel="stylesheet" href="/css/components/profile.css">
+    <link rel="stylesheet" href="/css/components/qr-scanner.css">
+    <link rel="stylesheet" href="/css/components/leaderboard.css">
     
     <!-- External Libraries -->
     <script src="https://unpkg.com/html5-qrcode"></script>
@@ -39,8 +42,8 @@
         <header class="app-header">
             <div class="container">
                 <div class="header-left">
-                    <img src="/src/assets/images/bdays-logo.png" alt="BDays Logo" class="header-logo">
-                    <h1>Birthdays Networking Event</h1>
+                    <img src="/assets/images/bdays-logo.png" alt="BDays Logo" class="header-logo">
+                    <h1>Blockchain Days'25</h1>
                 </div>
                 <div class="header-actions">
                     <div class="user-score">
@@ -111,8 +114,8 @@
     <div id="login-modal" class="modal active">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Welcome to Birthdays Networking Event</h2>
-                <img src="/src/assets/images/bdays-logo.png" alt="BDays Logo" class="modal-logo">
+                <h2>Welcome to Blockchain Days'25</h2>
+                <img src="/assets/images/bdays-logo.png" alt="BDays Logo" class="modal-logo">
             </div>
             <p class="modal-description">Please login or register to continue</p>
             <form id="login-form">
@@ -135,14 +138,18 @@
     <!-- Notification Container -->
     <div id="notification-container"></div>
 
-    <!-- JavaScript Files -->
-    <script src="/src/js/config/constants.js"></script>
-    <script src="/src/js/utils/storage.js"></script>
-    <script src="/src/js/utils/notifications.js"></script>
-    <script src="/src/js/components/modal.js"></script>
-    <script src="/src/js/components/profile.js"></script>
-    <script src="/src/js/components/qr-scanner.js"></script>
-    <script src="/src/js/components/leaderboard.js"></script>
-    <script src="/src/js/app.js"></script>
+    <!-- Core JavaScript Files -->
+    <script type="module" src="/js/config/constants.js"></script>
+    <script type="module" src="/js/utils/storage.js"></script>
+    <script type="module" src="/js/utils/notifications.js"></script>
+    
+    <!-- Component JavaScript Files -->
+    <script type="module" src="/js/components/modal.js"></script>
+    <script type="module" src="/js/components/profile.js"></script>
+    <script type="module" src="/js/components/qr-scanner.js"></script>
+    <script type="module" src="/js/components/leaderboard.js"></script>
+    
+    <!-- Main Application JavaScript -->
+    <script type="module" src="/js/app.js"></script>
 </body>
 </html> 
